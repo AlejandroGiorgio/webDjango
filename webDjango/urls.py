@@ -17,7 +17,9 @@ from xml.etree.ElementInclude import include
 from django.contrib import admin
 from django.urls import path, include
 from webDjango.view import home, homePage
+from AppCoder import urls
 urlpatterns = [
+    path('', home),
     path('admin/', admin.site.urls),
     path('home/', home),
     path('homePage/', homePage),
