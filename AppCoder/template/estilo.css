@@ -1,0 +1,22 @@
+.contenido{
+    position: relative;
+    top: 60px;
+    color: crimson;
+}
+
+
+.contenidoestudiantes{
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+    padding: 5px;
+}
+
+.formDataEstudiantes{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}

@@ -1,0 +1,7 @@
+{% load static %}
+<link rel="">
+{% for estudiante in estudiantes %}
+    <li>
+        {{estudiante}}
+        <a class="btn btn-warning">Edith</a>
+        <a href="/AppCoder/delete_estudiantes/{{estudiante.email}}" class="btn btn-danger">Delete</a>
