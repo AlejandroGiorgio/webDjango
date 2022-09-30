@@ -136,3 +136,12 @@ def changepass(request):
     usuario = request.user
     if request.method == "POST":
         pass
+
+def AgregarAvatar(request):
+    form=AvatarFormulario(request.POST, request.FILE)
+    if form.is_valid():
+        user = User.objects.get(username = request.user)
+        avatar =Avatar(user = user, image = form.cleaned_data ['avatar'], id = request.user.id)
+        avatar.save()
+        avatar = Avatar.objects.filter(user=request.user.id)
+        return render(request,'home.html', {'avatar': avatar[0].image.url})

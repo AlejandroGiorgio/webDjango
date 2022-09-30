@@ -25,3 +25,5 @@ urlpatterns = [
     path('homePage/', homePage),
     path('AppCoder/', include("AppCoder.urls"))
 ]
+
+urlpatterns+= static(settings.MEDIA_URL, Ddocument_root = settings.MEDIA_ROOT)
